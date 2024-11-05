@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="styles.css" rel="stylesheet">
-    </link>
+    <link href="styles.css" rel="stylesheet"></link>
+    <style>
+         .container {
+            margin-top: 120px;
+            margin-bottom: 100px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .year-div {
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            background-color: #1c1c1c;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .year-div:hover {
+            background-color: #333;
+        }
+    </style>
 </head>
-
 <body>
     <div class="container">
 
@@ -26,51 +46,21 @@
 
         </header>
 
-        <div class="content">
+    <!-------------------------------Main resource content here ------------------------->
 
-            <div class="intro-container">
+    <div class="container">
+        <div class="year-div" onclick="redirectTo('first-year-resources.html')">First Year</div>
+        <div class="year-div" onclick="redirectTo('second-year-resources.html')">Second Year</div>
+        <div class="year-div" onclick="redirectTo('third-year-resources.html')">Third Year</div>
+    </div>
 
-                <div class="ineer-intro-div">
-                    <h1>Unity Builds Stronger Teams</h1>
-                        <h4>WELCOME TO STUDENTS COMMITEE OF CO & AN</h4>
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum repellat mollitia architecto
-                            laudantium vel delectus, obcaecati iusto debitis? Esse quo pariatur ipsum, dolores ea
-                            asperiores. Perspiciatis, eius totam? Laboriosam, possimus?</P>
+    <script>
+        function redirectTo(file) {
+            window.location.href = file; // Redirects to the specified HTML file
+        }
+    </script>
 
-                </div>
-
-            </div>
-
-
-            <!-- this is div of the Cards -->
-
-            <div class="card-container">
-
-                <div class="card-container-content">
-
-                    <div class="card" id="card1">
-                        <img id="deco"></img>
-                    </div>
-
-                    
-                    <div class="card" id="card2">
-                        <img id="commitee"></img>
-                    </div>
-
-                    
-                    <div class="card" id="card3">
-                        <img id="topper"></img>
-                    </div>
-
-                    
-                </div>
-
-
-
-            </div>
-
-        </div>
-
+    <!------------------------------------ FOOTER SIDE ---------------------------------->
         <footer>
             <div class="footer-container">
                 <div class="footer-column">
@@ -116,7 +106,6 @@
     
 
     </div>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
